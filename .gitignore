@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Project temporary files
+temp_video.mp4
+*.mp3
+*.wav
+video_transcript_report.md
