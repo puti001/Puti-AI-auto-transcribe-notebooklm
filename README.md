@@ -1,4 +1,4 @@
-# 🎙️ Auto Transcribe NotebookLM
+# 🎙️ Puti-AI: Auto Transcribe NotebookLM
 
 一個高度自動化的影音知識庫轉寫與同步工具。
 
