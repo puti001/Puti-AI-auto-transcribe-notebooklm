@@ -164,8 +164,21 @@ def transcribe_and_sync(video_url):
         # 4. 同步至 NotebookLM
         if nlm_cmd:
             print("📓 步驟 4: 正在自動同步至 NotebookLM...")
+            
+            # 動態讀取報告的第一行標題（例如 # 中華席禮與相撲起源考），作為筆記本標題
+            notebook_title = "【影片分析】"
+            try:
+                with open(output_path, "r", encoding="utf-8") as rf:
+                    first_line = rf.readline().strip()
+                    if first_line.startswith("#"):
+                        extracted_title = first_line.lstrip("#").strip()
+                        notebook_title = "【影片分析】" + extracted_title[:30] # 限制字數以防 API 限制
+                    else:
+                        notebook_title = "【影片分析】" + video_url.split("/")[-1][:15]
+            except Exception:
+                notebook_title = "【影片分析】" + video_url.split("/")[-1][:15]
+
             # 建立新筆記本
-            notebook_title = "【影片分析】" + video_url.split("/")[-1][:15]
             create_res = subprocess.run(
                 [nlm_cmd, "notebook", "create", notebook_title],
                 capture_output=True, text=True
