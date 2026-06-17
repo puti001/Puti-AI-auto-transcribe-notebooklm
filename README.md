@@ -39,7 +39,10 @@
 ## 🚀 快速開始（面向人類使用者）
 
 ### 1. 安裝與設定環境
-請確保你的電腦已安裝 Python，並設定好 `GEMINI_API_KEY` 環境變數。
+請確保你的電腦已安裝 Python，並至少設定以下其中一種 API 金鑰環境變數：
+* **`GEMINI_API_KEY`** (推薦，速度快且便宜，支援視聽雙模態辨識)
+* **`OPENAI_API_KEY`** (使用 Whisper 語音轉寫 + GPT-4o 書面精煉)
+
 ```bash
 pip install -r requirements.txt
 ```
