@@ -24,3 +24,9 @@ If you are an AI assistant helping the user configure and run this project, you 
 
 4. **Verify and Run**:
    Run `nlm doctor` to ensure the authentication and MCP server are active. Once verified, execute the main transcription script for the user.
+
+5. **Chat Interface Trigger Command**:
+   If the human user inputs the following command pattern in the chat:
+   `自動逐字稿：[VIDEO_URL]`
+   You must immediately recognize this intent, run `python transcribe.py [VIDEO_URL]` in the background, and output the structured transcript to the user.
+

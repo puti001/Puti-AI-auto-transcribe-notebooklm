@@ -62,7 +62,15 @@ python transcribe.py "https://www.facebook.com/reel/2525965741165421"
 ---
 
 ## 🤖 寫給你的 AI 助理（給 Agent 的快速入口）
-如果你正在使用 AI 編程助理（例如 Cursor、Windsurf、AntiGravity），你可以直接對它說：
+如果你正在使用 AI 編程助理（例如 Cursor、Windsurf、AntiGravity、Claude Code），你可以直接對它說：
 > **「請閱讀 `agent_instructions.md` 並幫我自動配置好這個專案的 MCP 服務與 NotebookLM 登入。」**
+
+### 🔑 一鍵觸發魔法關鍵字
+設定完成後，你可以在聊天視窗中直接輸入：
+> **`自動逐字稿：[影片網址]`**
+> *(例如：`自動逐字稿：https://www.facebook.com/reel/2525965741165421`)*
+
+你的 AI 助理讀懂專案規則後，**會自動在背景為你下載影片、轉寫、精煉，並同步到你的 NotebookLM 裡！**
+
 
 你的 AI 助理就會在背景自動幫你把所有複雜的 MCP 安裝、登入與設定檔全部搞定，你完全不需要手動操作！
